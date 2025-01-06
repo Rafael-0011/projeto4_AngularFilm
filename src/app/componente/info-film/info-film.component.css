@@ -1,0 +1,12 @@
+.card__flex{
+    display: flex;
+    justify-content: center;  
+  column-gap: 2rem;
+    
+}
+
+.info__film{
+    color: rgb(220, 230, 230);
+    margin-top: 1rem;
+    width: 50%;
+}

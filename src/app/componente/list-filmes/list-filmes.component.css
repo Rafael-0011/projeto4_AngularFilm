@@ -1,0 +1,21 @@
+.card__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1rem;
+    column-gap: 1rem;
+  }
+  
+  .card__flex::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  h1{
+  color: aliceblue;
+  padding-left: 1rem;
+  }
+  
+  

@@ -1,0 +1,19 @@
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.logo__img{
+    width: 10rem;
+}
+
+.pesquisa__input{
+    font-size: 1rem;
+    width: 37rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: aliceblue;
+}

@@ -1,0 +1,29 @@
+<div class="cabecalho">
+  <div class="logo">
+    <a [routerLink]="['']">
+      <img
+        class="logo__img"
+        src="https://imgs.search.brave.com/9k-rGdHZWtzCsgJc6T7FpfHN7p1HWX59WeTvxJ1Jo08/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi80LzQ3L1Bp/cmF0ZV9GbGFnX29m/X0phY2tfUmFja2hh/bS5zdmcvNjQwcHgt/UGlyYXRlX0ZsYWdf/b2ZfSmFja19SYWNr/aGFtLnN2Zy5wbmc"
+        alt=""
+      />
+    </a>
+  </div>
+  <div class="pesquisa">
+    <input
+      [(ngModel)]="pesquisa"
+      (input)="handlePesquisas()"
+      class="pesquisa__input"
+      placeholder="pesquisa"
+      type="search"
+    />
+  </div>
+</div>
+
+@if (isVisible && filmsPesquisado.length > 0) {
+<app-list-filmes
+  [listFilms]="filmsPesquisado"
+  [titulo]="'Resultados da Pesquisa'"
+  [customStyles]="{ 'flex-wrap': 'wrap' }"
+  (filmClick)="serviceFilme.updateQuote(false)"
+></app-list-filmes>
+}
