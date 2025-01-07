@@ -24,9 +24,8 @@ export class ListFilmesComponent {
   onFilmClick(): void {
     this.filmClick.emit();
 
-    const topElement = document.getElementById('app-cabecalho')
-    console.log(topElement);
-    
+    const topElement = document.getElementById('app-cabecalho');
+
     if (topElement) {
       topElement.scrollIntoView({ behavior: 'smooth' });
     }
