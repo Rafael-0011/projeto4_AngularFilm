@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FilmsService } from '../../service/films.service';
-import { ListFilmesComponent } from '../list-filmes/list-filmes.component';
+import { ListFilmesComponent } from '../../componente/list-filmes/list-filmes.component';
 import { MFilme } from '../../model/m-filme';
 
 @Component({

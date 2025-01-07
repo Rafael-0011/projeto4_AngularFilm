@@ -1,6 +1,6 @@
 import { Component, ElementRef } from '@angular/core';
 import { environment } from '../../../environments/environment';
-import { BannersDosFilmesComponent } from '../banners-dos-filmes/banners-dos-filmes.component';
+import { BannersDosFilmesComponent } from '../../componente/banners-dos-filmes/banners-dos-filmes.component';
 import { FilmsService } from '../../service/films.service';
 import { ActivatedRoute } from '@angular/router';
 import { MFilme } from '../../model/m-filme';
@@ -31,6 +31,4 @@ export class InfoFilmComponent {
       }
     });
   }
-
- 
 }

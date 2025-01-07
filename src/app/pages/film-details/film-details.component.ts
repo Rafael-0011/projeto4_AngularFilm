@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CabecalhoComponent } from '../../componente/cabecalho/cabecalho.component';
+import { CabecalhoComponent } from '../../templates/cabecalho/cabecalho.component';
 
-import { InfoFilmComponent } from '../../componente/info-film/info-film.component';
+import { InfoFilmComponent } from '../../templates/info-film/info-film.component';
 
-import { ListFilmPopularComponent } from '../../componente/list-film-popular/list-film-popular.component';
-import { ListFilmBemAvaliadoComponent } from '../../componente/list-film-bem-avaliado/list-film-bem-avaliado.component';
+import { ListFilmPopularComponent } from '../../templates/list-film-popular/list-film-popular.component';
+import { ListFilmBemAvaliadoComponent } from '../../templates/list-film-bem-avaliado/list-film-bem-avaliado.component';
 
 @Component({
   selector: 'app-film-details',

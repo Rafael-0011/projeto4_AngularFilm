@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { FilmsService } from '../../service/films.service';
 import { Router, RouterLink } from '@angular/router';
-import { ListFilmesComponent } from '../list-filmes/list-filmes.component';
+import { ListFilmesComponent } from '../../componente/list-filmes/list-filmes.component';
 import { MFilme } from '../../model/m-filme';
 
 @Component({
