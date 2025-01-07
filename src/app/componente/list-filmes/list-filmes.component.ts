@@ -16,8 +16,7 @@ export class ListFilmesComponent {
   logoUrl = `${environment.URL_IMG}`;
   @Input() titulo!: string;
 
-  @Input() customClass: string = '';
-  @Input() customStyles: { [key: string]: string } = {};
+  @Input() customListStyles: { [key: string]: string } = {};
 
   @Output() filmClick: EventEmitter<void> = new EventEmitter();
 

@@ -1,24 +1,40 @@
-<div class="card__flex">
-  <div>
-    <app-banners-dos-filmes
-      [bannerUrl]="bannerUrl + filmsDetails[0].poster_path"
-    >
-    </app-banners-dos-filmes>
-  </div>
-  <div class="info__film">
-    <h1>{{ filmsDetails[0].title }}</h1>
-    <p>{{ filmsDetails[0].overview }}</p>
-    <p>Data de Lançamento: {{ filmsDetails[0].release_date }}</p>
-    <p>Score: {{ filmsDetails[0].vote_average }}</p>
-    <p>Gêneros: 
-        @for (genre of filmsDetails[0].genres; track $index) {
+<div
+  [ngStyle]="{
+    'background-image':
+      'url(' + bannerUrl + filmsDetails[0].backdrop_path + ')',
+    'background-size': 'cover',
+    'background-position': 'center',
+    'background-repeat': 'no-repeat',
+  
+    }"
+>
+  <div class="card__flex">
+    <div>
+      <app-banners-dos-filmes
+        [bannerUrl]="bannerUrl + filmsDetails[0].poster_path"
+      >
+      </app-banners-dos-filmes>
+    </div>
+    <div class="info__film">
+      <h1 class="font__title">{{ filmsDetails[0].title }}</h1>
+      <p class="font">{{ filmsDetails[0].overview }}</p>
+      <p class="font">
+        <strong>Data de Lançamento: </strong>{{ filmsDetails[0].release_date }}
+      </p>
+      <p class="font">
+        <strong>Score: </strong>{{ filmsDetails[0].vote_average }}
+      </p>
+      <p class="font">
+        <strong>Gêneros:</strong> @for (genre of filmsDetails[0].genres; track
+        $index) {
         {{ genre.name }}
         }
-    </p>
-    <p>Producers: 
-        @for (companies of filmsDetails[0].production_companies; track $index) {
-        {{ companies.name }}, 
-        }
-    </p>
+      </p>
+      <p class="font">
+        <strong> Producers:</strong> @for (companies of
+        filmsDetails[0].production_companies; track $index) {
+        {{ companies.name }}, }
+      </p>
+    </div>
   </div>
 </div>

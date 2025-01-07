@@ -4,10 +4,11 @@ import { BannersDosFilmesComponent } from '../../componente/banners-dos-filmes/b
 import { FilmsService } from '../../service/films.service';
 import { ActivatedRoute } from '@angular/router';
 import { MFilme } from '../../model/m-filme';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-info-film',
-  imports: [BannersDosFilmesComponent],
+  imports: [BannersDosFilmesComponent, CommonModule],
   templateUrl: './info-film.component.html',
   styleUrl: './info-film.component.css',
 })

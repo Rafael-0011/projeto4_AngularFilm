@@ -1,4 +1,4 @@
-<div class="cabecalho" id="app-cabecalho" >
+<div class="cabecalho" id="app-cabecalho">
   <div class="logo">
     <a [routerLink]="['']">
       <img
@@ -23,7 +23,7 @@
 <app-list-filmes
   [listFilms]="filmsPesquisado"
   [titulo]="'Resultados da Pesquisa'"
-  [customStyles]="{ 'flex-wrap': 'wrap' }"
+  [customListStyles]="{ 'flex-wrap': 'wrap'}"
   (filmClick)="serviceFilme.updateQuote(false)"
 ></app-list-filmes>
 }

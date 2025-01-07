@@ -9,6 +9,7 @@ export class MFilme implements IFilme {
     public title: string,
     public overview: string,
     public release_date: string,
-    public vote_average: string
+    public vote_average: string,
+    public backdrop_path: string
   ) {}
 }
