@@ -16,6 +16,12 @@ Inicializa o server execute:
 ng serve
 ```
 
+Para construir o projeto execute:
+
+```bash
+ng build
+```
+
 Para obter uma lista completa de esquemas disponíveis (`components`, `directives`, or `pipes`), run:
 
 ```bash
@@ -24,11 +30,28 @@ ng generate --help
 
 ## Building
 
-Para construir o projeto execute:
+Isso compilará seu projeto e armazenará os artefatos de compilação no diretório `dist/` Por padrão, a compilação de produção otimiza seu aplicativo para desempenho e velocidade.
+
+#Build docker
+
+Isso compilará para uma image docker
 
 ```bash
-ng build
+docker build -t angular-filme-app .
 ```
-Isso compilará seu projeto e armazenará os artefatos de compilação no diretório `public/` Por padrão, a compilação de produção otimiza seu aplicativo para desempenho e velocidade.
+
+Isso
+
+```bash
+docker run -p 8080:80 angular-filme-app:latest
+```
+
+Vá para o naevgador e pesquiser
+
+```bash
+http://localhost:8080/
+
+```
+
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
