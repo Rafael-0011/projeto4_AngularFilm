@@ -1,12 +1,20 @@
-.card__flex{
-    display: flex;
-    justify-content: center;  
+.card__flex {
+  display: flex;
+  justify-content: center;
   column-gap: 2rem;
-    
+  height: 46rem;
+  align-items: center;
 }
 
-.info__film{
-    color: rgb(220, 230, 230);
-    margin-top: 1rem;
-    width: 50%;
+.info__film {
+  color: rgb(255, 255, 255);
+  width: 40%;
+  text-align: start;
+  background-color: rgba(12, 12, 12, 0.7);
+  margin-bottom: 8rem;
+  padding-left: 1rem;
+}
+
+.font {
+  font-size: 1rem;
 }

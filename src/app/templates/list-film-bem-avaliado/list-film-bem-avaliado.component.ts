@@ -15,8 +15,15 @@ export class ListFilmBemAvaliadoComponent {
 
   constructor(private filmesService: FilmsService) {}
 
+  get serviceFilme() {
+    return this.filmesService;
+  }
+
   ngOnInit(): void {
     this.listaFilmesSeriesBemAvaliado();
+    this.filmesService.currentQuote.subscribe((quote) => {
+      quote = false;
+   });
   }
 
   listaFilmesSeriesBemAvaliado(): void {

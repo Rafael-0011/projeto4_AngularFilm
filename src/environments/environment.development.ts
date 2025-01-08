@@ -5,7 +5,7 @@ export const environment = {
 
   URL_TRENDING:'https://api.themoviedb.org/3/movie/popular?language=pt-BR&page=1',
 
-  URL_IMG:'https://image.tmdb.org/t/p/w500',
+  URL_IMG:'https://image.tmdb.org/t/p/original',
 
   URL_TOP_RATED:'https://api.themoviedb.org/3/movie/top_rated?language=pt-BR&page=1',
 

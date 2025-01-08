@@ -7,4 +7,5 @@ export interface IFilme {
   overview: string;
   release_date: string;
   vote_average: string;
+  backdrop_path: string;
 }

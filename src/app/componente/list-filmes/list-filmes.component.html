@@ -1,6 +1,6 @@
 <article>
   <h1>{{ titulo }}</h1>
-  <div [ngStyle]="customStyles" class="card__flex">
+  <div [ngStyle]="customListStyles" class="card__flex">
     
     @for (filme of listFilms; track $index) {
     <a [routerLink]="['/filme',filme.id]"  (click)="onFilmClick()">

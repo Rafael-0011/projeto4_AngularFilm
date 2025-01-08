@@ -15,8 +15,16 @@ export class ListFilmPopularComponent {
 
   constructor(private filmesService: FilmsService) {}
 
+  get serviceFilme() {
+    return this.filmesService;
+  }
+
+  
   ngOnInit(): void {
     this.handleListaFilmesPopulares();
+    this.filmesService.currentQuote.subscribe((quote) => {
+       quote = false;
+    });
   }
 
   handleListaFilmesPopulares(): void {
