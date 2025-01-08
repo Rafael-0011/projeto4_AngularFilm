@@ -12,3 +12,15 @@
 .banner img:hover {
   transform: scale(1.15);
 }
+
+@media (max-width:360px){
+
+  .banner img {
+    width: 10rem;
+  }
+
+  .banner img:hover {
+    transform:none;
+  }
+
+}

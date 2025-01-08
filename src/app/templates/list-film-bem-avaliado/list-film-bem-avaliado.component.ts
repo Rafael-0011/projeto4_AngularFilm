@@ -21,9 +21,6 @@ export class ListFilmBemAvaliadoComponent {
 
   ngOnInit(): void {
     this.listaFilmesSeriesBemAvaliado();
-    this.filmesService.currentQuote.subscribe((quote) => {
-      quote = false;
-   });
   }
 
   listaFilmesSeriesBemAvaliado(): void {

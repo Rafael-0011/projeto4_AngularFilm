@@ -18,3 +18,38 @@
 .font {
   font-size: 1rem;
 }
+
+@media (max-width:360px){
+  
+  .card__flex {
+    height: 30rem;
+    column-gap: 1px;
+
+    margin-top: 1rem;
+
+    margin-bottom: 10rem;
+
+  }
+  
+  .info__film {
+    margin-top: 10rem;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    background-color: rgba(12, 12, 12, 0.7);
+    padding-left: 1rem;
+  }
+  
+  .font__title {
+    font-size: 10px;
+  }
+
+  .font {
+    font-size: 10px;
+    max-height: 15rem; 
+    overflow: scroll; 
+  }
+  .font::-webkit-scrollbar {
+    width: 0px;
+  }
+
+}

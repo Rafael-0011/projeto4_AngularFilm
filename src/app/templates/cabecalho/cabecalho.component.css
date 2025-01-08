@@ -16,3 +16,22 @@
     border-radius: 0.5rem;
     background-color: aliceblue;
 }
+
+@media (max-width:360px){
+  
+    .cabecalho{
+        display: flex;
+        justify-content: space-between;        
+    }
+
+    .logo__img{
+        width: 4rem;
+    }
+    
+    .pesquisa__input{
+        font-size: 1rem;
+        width: 10rem;
+        height: 2rem;
+        background-color: aliceblue;
+    }
+}

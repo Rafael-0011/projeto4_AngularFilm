@@ -19,12 +19,8 @@ export class ListFilmPopularComponent {
     return this.filmesService;
   }
 
-  
   ngOnInit(): void {
     this.handleListaFilmesPopulares();
-    this.filmesService.currentQuote.subscribe((quote) => {
-       quote = false;
-    });
   }
 
   handleListaFilmesPopulares(): void {
