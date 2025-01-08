@@ -46,7 +46,7 @@ Isso faz o run da aplicao na porta :8080
 docker run -p 8080:80 angular-filme-app:latest
 ```
 
-Vá para o naevgador e pesquiser
+Vá para o navegador e pesquiser
 
 ```bash
 http://localhost:8080/
