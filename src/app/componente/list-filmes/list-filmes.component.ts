@@ -4,10 +4,11 @@ import { BannersDosFilmesComponent } from '../banners-dos-filmes/banners-dos-fil
 import { RouterLink } from '@angular/router';
 import { MFilme } from '../../model/m-filme';
 import { CommonModule } from '@angular/common';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-list-filmes',
-  imports: [BannersDosFilmesComponent, RouterLink, CommonModule],
+  imports: [BannersDosFilmesComponent, RouterLink, CommonModule,CardModule],
   templateUrl: './list-filmes.component.html',
   styleUrl: './list-filmes.component.css',
 })

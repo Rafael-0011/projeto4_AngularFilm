@@ -1,13 +1,18 @@
 <article>
-  <h1>{{ titulo }}</h1>
-  <div [ngStyle]="customListStyles" class="card__flex">
-    
-    @for (filme of listFilms; track $index) {
-    <a [routerLink]="['/filme',filme.id]"  (click)="onFilmClick()">
-      <app-banners-dos-filmes
-        [bannerUrl]="logoUrl + filme.poster_path"
-      ></app-banners-dos-filmes>
-    </a>
-    }
-  </div>
+  
 </article>
+
+<p-card [style]="{ overflow: 'hidden', 'border-radius':'0px' }">
+  <ng-template #title>{{ titulo }}</ng-template>
+  <ng-template #subtitle>
+    <div [ngStyle]="customListStyles" class="card__flex">
+      @for (filme of listFilms; track $index) {
+      <a [routerLink]="['/filme', filme.id]" (click)="onFilmClick()">
+        <app-banners-dos-filmes
+          [bannerUrl]="logoUrl + filme.poster_path"
+        ></app-banners-dos-filmes>
+      </a>
+      }
+    </div>
+  </ng-template >
+</p-card>

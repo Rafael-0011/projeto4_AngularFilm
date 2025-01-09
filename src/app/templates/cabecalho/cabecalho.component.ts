@@ -4,10 +4,31 @@ import { FilmsService } from '../../service/films.service';
 import { Router, RouterLink } from '@angular/router';
 import { ListFilmesComponent } from '../../componente/list-filmes/list-filmes.component';
 import { MFilme } from '../../model/m-filme';
-
+import { ToolbarModule } from 'primeng/toolbar';
+import { ButtonModule } from 'primeng/button';
+import { IconFieldModule } from 'primeng/iconfield';
+import { InputIconModule } from 'primeng/inputicon';
+import { SplitButtonModule } from 'primeng/splitbutton';
+import { InputTextModule } from 'primeng/inputtext';
+import { StyleClassModule } from 'primeng/styleclass';
+import { CardModule } from 'primeng/card';
+import { PanelModule } from 'primeng/panel';
 @Component({
   selector: 'app-cabecalho',
-  imports: [FormsModule, RouterLink, ListFilmesComponent],
+  imports: [
+    FormsModule,
+    RouterLink,
+    ListFilmesComponent,
+    ToolbarModule,
+    ButtonModule,
+    IconFieldModule,
+    InputIconModule,
+    SplitButtonModule,
+    InputTextModule,
+    StyleClassModule,
+    CardModule,
+    PanelModule,
+  ],
   templateUrl: './cabecalho.component.html',
   styleUrl: './cabecalho.component.css',
 })

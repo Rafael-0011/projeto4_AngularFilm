@@ -5,10 +5,11 @@ import { FilmsService } from '../../service/films.service';
 import { ActivatedRoute } from '@angular/router';
 import { MFilme } from '../../model/m-filme';
 import { CommonModule } from '@angular/common';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-info-film',
-  imports: [BannersDosFilmesComponent, CommonModule],
+  imports: [BannersDosFilmesComponent, CommonModule,CardModule],
   templateUrl: './info-film.component.html',
   styleUrl: './info-film.component.css',
 })

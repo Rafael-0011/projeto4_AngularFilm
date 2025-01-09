@@ -1,0 +1,11 @@
+<app-list-filmes
+  [listFilms]="filmesPopulares"
+  [titulo]="tituloFilmesPopulares"
+  (filmClick)="serviceFilme.updateQuote(false)"
+></app-list-filmes>
+
+<app-list-filmes
+  [listFilms]="filmesBemAvaliado"
+  [titulo]="tituloFilmesBemAvaliado"
+  (filmClick)="serviceFilme.updateQuote(false)"
+></app-list-filmes>

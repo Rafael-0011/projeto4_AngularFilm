@@ -1,12 +1,12 @@
-<div
-  [ngStyle]="{
-    'background-image':
-      'url(' + bannerUrl + filmsDetails[0].backdrop_path + ')',
-    'background-size': 'cover',
-    'background-position': 'center',
-    'background-repeat': 'no-repeat',
-  
-    }"
+<p-card 
+  [style]="{
+  'background-image':
+    'url(' + bannerUrl + filmsDetails[0].backdrop_path + ')',
+  'background-size': 'cover',
+  'background-position': 'center',
+  'background-repeat': 'no-repeat',
+
+  }"
 >
   <div class="card__flex">
     <div>
@@ -27,7 +27,7 @@
       <p class="font">
         <strong>Gêneros:</strong> @for (genre of filmsDetails[0].genres; track
         $index) {
-        {{ genre.name }}
+        {{ genre.name }},
         }
       </p>
       <p class="font">
@@ -37,4 +37,4 @@
       </p>
     </div>
   </div>
-</div>
+</p-card >

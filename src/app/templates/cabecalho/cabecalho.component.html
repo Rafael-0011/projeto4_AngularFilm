@@ -1,5 +1,5 @@
-<div class="cabecalho" id="app-cabecalho">
-  <div class="logo">
+<p-toolbar [style]="{ padding: '1rem 1rem 1rem 1.5rem' }" id="app-cabecalho">
+  <ng-template #start>
     <a [routerLink]="['']">
       <img
         class="logo__img"
@@ -7,23 +7,25 @@
         alt=""
       />
     </a>
-  </div>
-  <div class="pesquisa">
+  </ng-template>
+  <ng-template #center>
     <input
+      class="input"
+      pInputText
       [(ngModel)]="pesquisa"
       (input)="handlePesquisas()"
-      class="pesquisa__input"
       placeholder="pesquisa"
-      type="search"
+      type="text"
     />
-  </div>
-</div>
+  </ng-template>
+  <ng-template #end> </ng-template>
+</p-toolbar>
 
 @if (isVisible && filmsPesquisado.length > 0) {
 <app-list-filmes
   [listFilms]="filmsPesquisado"
   [titulo]="'Resultados da Pesquisa'"
-  [customListStyles]="{ 'flex-wrap': 'wrap'}"
+  [customListStyles]="{ 'flex-wrap': 'wrap' }"
   (filmClick)="serviceFilme.updateQuote(false)"
 ></app-list-filmes>
 }

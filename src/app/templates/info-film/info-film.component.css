@@ -2,8 +2,12 @@
   display: flex;
   justify-content: center;
   column-gap: 2rem;
-  height: 46rem;
+  height: 51rem;
   align-items: center;
+}
+
+.p-card-body{
+  padding: 0px;
 }
 
 .info__film {

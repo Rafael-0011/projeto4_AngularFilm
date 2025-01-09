@@ -1,37 +1,14 @@
-.cabecalho{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-        
+.logo__img {
+  width: 10rem;
+  mix-blend-mode: screen;
 }
 
-.logo__img{
-    width: 10rem;
+.input {
+  width: 30rem;
 }
 
-.pesquisa__input{
-    font-size: 1rem;
-    width: 37rem;
-    height: 3rem;
-    border-radius: 0.5rem;
-    background-color: aliceblue;
-}
-
-@media (max-width:360px){
-  
-    .cabecalho{
-        display: flex;
-        justify-content: space-between;        
-    }
-
-    .logo__img{
-        width: 4rem;
-    }
-    
-    .pesquisa__input{
-        font-size: 1rem;
-        width: 10rem;
-        height: 2rem;
-        background-color: aliceblue;
-    }
+@media (max-width: 360px) {
+  .logo__img {
+    width: 4rem;
+  }
 }
