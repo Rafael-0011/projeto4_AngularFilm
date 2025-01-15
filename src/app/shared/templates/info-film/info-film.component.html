@@ -1,4 +1,5 @@
-<p-card 
+@if (alterarStatus) {
+  <p-card 
   [style]="{
   'background-image':
     'url(' + bannerUrl + filmsDetails[0].backdrop_path + ')',
@@ -6,8 +7,8 @@
   'background-position': 'center',
   'background-repeat': 'no-repeat',
 
-  }"
->
+  }">
+  
   <div class="card__flex">
     <div>
       <app-banners-dos-filmes
@@ -38,3 +39,4 @@
     </div>
   </div>
 </p-card >
+}

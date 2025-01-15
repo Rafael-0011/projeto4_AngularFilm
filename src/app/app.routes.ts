@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { FilmDetailsComponent } from './pages/film-details/film-details.component';
-import { HomeComponent } from './pages/home/home.component';
+import { FilmDetailsComponent } from './modules/pages/film-details/film-details.component';
+import { HomeComponent } from './modules/pages/home/home.component';
+
 
 export const routes: Routes = [
   { path: 'filme/:id', component: FilmDetailsComponent },

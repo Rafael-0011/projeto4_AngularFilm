@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { MFilme } from '../../model/m-filme';
-import { FilmsService } from '../../service/films.service';
+import { MFilme } from '../../../model/m-filme';
 import { ListFilmesComponent } from "../list-filmes/list-filmes.component";
+import { FilmsService } from '../../../core/service/films.service';
 
 @Component({
   selector: 'app-mostra-lista-filmes',
@@ -13,8 +13,7 @@ export class MostraListaFilmesComponent {
   filmesBemAvaliado: MFilme[] = [];
   filmesPopulares: MFilme[] = [];
 
-  tituloFilmesBemAvaliado = 'Filmes/Series Bem Avaliados';
-
+  
   constructor(private filmesService: FilmsService) {}
 
   get serviceFilme() {
@@ -26,11 +25,14 @@ export class MostraListaFilmesComponent {
     this.handleListaFilmesPopulares();
   }
 
+  tituloFilmesBemAvaliado = 'Filmes/Series Bem Avaliados';
+
   listaFilmesSeriesBemAvaliado(): void {
     this.filmesService.getFilmesSeriesBemAvaliado().subscribe((data) => {
       this.filmesBemAvaliado = data.results;
     });
   }
+
 
   tituloFilmesPopulares = 'Filmes Populares';
 

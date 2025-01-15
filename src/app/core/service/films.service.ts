@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../environments/environment';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { MFilme } from '../model/m-filme';
+import { environment } from '../../../environments/environment.development';
+import { MFilme } from '../../model/m-filme';
 
 @Injectable({
   providedIn: 'root',
@@ -19,36 +19,34 @@ export class FilmsService {
   }
 
   getFilmesSeriesAlta(): Observable<{ results: MFilme[] }> {
-    return this.http.get<{ results: MFilme[] }>(
-      environment.URL_TRENDING,
-      this.header()
-    );
+    const url = `${environment.URL_BASE}/${environment.URL_TRENDING}`;
+    return this.http.get<{ results: MFilme[] }>(url, this.header());
   }
 
   getFilmesSeriesBemAvaliado(): Observable<{ results: MFilme[] }> {
-    return this.http.get<{ results: MFilme[] }>(
-      environment.URL_TOP_RATED,
-      this.header()
-    );
+    const url = `${environment.URL_BASE}/${environment.URL_TOP_RATED}`;
+    return this.http.get<{ results: MFilme[] }>(url, this.header());
   }
 
   getPesquisa(pesquisa: string): Observable<{ results: MFilme[] }> {
-    const url = `${environment.URL_GETNAME_FILME_PARTE1}${pesquisa}${environment.URL_GETNAME_FILME_PARTE2}`;
+    const url = `${environment.URL_BASE}/${environment.URL_GETNAME_FILME_PARTE1}${pesquisa}${environment.URL_GETNAME_FILME_PARTE2}`;
     return this.http.get<{ results: MFilme[] }>(url, this.header());
   }
 
   getIdFilme(id: string): Observable<MFilme> {
-    const url = `${environment.URL_GET_DETAILS}${id}?language=pt-BR`;
+    const url = `${environment.URL_BASE}/movie/${id}?language=pt-BR`;
     return this.http.get<MFilme>(url, this.header());
   }
 
   qoute = new BehaviorSubject(true);
-
-  // expose the BehaviorSubject as an Observable
   currentQuote = this.qoute.asObservable();
-
-  // function to update the value of the BehaviorSubject
   updateQuote(newQuote: boolean) {
     this.qoute.next(newQuote);
+  }
+
+  falseBanner = new BehaviorSubject(true);
+  currentBanner = this.falseBanner.asObservable();
+  falseBannerUpdate(newQuote: boolean) {
+    this.falseBanner.next(newQuote);
   }
 }

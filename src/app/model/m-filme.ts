@@ -1,4 +1,4 @@
-import { IFilme } from '../inteface/i-filme';
+import { IFilme } from './inteface/i-filme';
 
 export class MFilme implements IFilme {
   constructor(

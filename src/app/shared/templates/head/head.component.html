@@ -1,0 +1,14 @@
+<app-cabecalho
+(pesquisaChange)="onPesquisaChange($event)"
+(filmsPesquisadoChange)="onFilmsChange($event)"
+>
+</app-cabecalho>
+
+@if (isVisible && filmsPesquisado.length > 0) {
+<app-list-filmes
+  [listFilms]="filmsPesquisado"
+  [titulo]="'Resultados da Pesquisa'"
+  [customListStyles]="{ 'flex-wrap': 'wrap' }"
+  (filmClick)="serviceFilme.updateQuote(false)"
+></app-list-filmes>
+}

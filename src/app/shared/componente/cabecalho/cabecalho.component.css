@@ -1,0 +1,14 @@
+.logo__img {
+    width: 10rem;
+    mix-blend-mode: screen;
+  }
+  
+  .input {
+    width: 30rem;
+  }
+  
+  @media (max-width: 360px) {
+    .logo__img {
+      width: 4rem;
+    }
+  }
