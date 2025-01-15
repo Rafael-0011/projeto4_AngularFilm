@@ -9,12 +9,13 @@ import { FilmsService } from '../../../core/service/films.service';
 
 @Component({
   selector: 'app-list-filmes',
-  imports: [BannersDosFilmesComponent, RouterLink, CommonModule, CardModule],
   templateUrl: './list-filmes.component.html',
   styleUrl: './list-filmes.component.css',
+  standalone:false
 })
 export class ListFilmesComponent {
   logoUrl = `${environment.URL_IMG}`;
+
 
   @Input() listFilms: MFilme[] = [];
   @Input() titulo!: string;
@@ -25,6 +26,24 @@ export class ListFilmesComponent {
 
   constructor(private filmesService: FilmsService) {}
 
+  responsiveOptions = [
+    {
+      breakpoint: '1024px',
+      numVisible: 3,
+      numScroll: 3,
+    },
+    {
+      breakpoint: '768px',
+      numVisible: 2,
+      numScroll: 2,
+    },
+    {
+      breakpoint: '560px',
+      numVisible: 1,
+      numScroll: 1,
+    },
+  ];
+  
   onFilmClick(): void {
     this.filmClick.emit();
     this.filmesService.falseBannerUpdate(true);

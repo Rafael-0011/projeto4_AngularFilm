@@ -1,9 +1,7 @@
 .card__flex {
     display: flex;
     flex-wrap: nowrap;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    padding-left: 1rem;
+    padding-left: 1;
     padding-right: 1rem;
     padding-top: 1rem;
   }
@@ -17,5 +15,10 @@
   padding-left: 1rem;
   }
   
+  .p-carousel-next-button	{
+    display: none;
+    text-decoration: none;
+    
+  }
   
 

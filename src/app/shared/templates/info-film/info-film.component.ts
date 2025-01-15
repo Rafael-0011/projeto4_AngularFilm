@@ -1,17 +1,16 @@
 import { Component, ElementRef } from '@angular/core';
 import { environment } from '../../../../environments/environment';
-import { BannersDosFilmesComponent } from '../../componente/banners-dos-filmes/banners-dos-filmes.component';
 import { ActivatedRoute } from '@angular/router';
 import { MFilme } from '../../../model/m-filme';
-import { CommonModule } from '@angular/common';
-import { CardModule } from 'primeng/card';
+
 import { FilmsService } from '../../../core/service/films.service';
 
 @Component({
   selector: 'app-info-film',
-  imports: [BannersDosFilmesComponent, CommonModule,CardModule],
   templateUrl: './info-film.component.html',
   styleUrl: './info-film.component.css',
+  standalone:false
+
 })
 export class InfoFilmComponent {
   bannerUrl = `${environment.URL_IMG}`;

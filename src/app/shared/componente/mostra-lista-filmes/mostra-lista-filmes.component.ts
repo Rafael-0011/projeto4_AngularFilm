@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { MFilme } from '../../../model/m-filme';
-import { ListFilmesComponent } from "../list-filmes/list-filmes.component";
 import { FilmsService } from '../../../core/service/films.service';
+import { BaseModule } from '../../base/base.module';
+import { Carousel } from 'primeng/carousel';
 
 @Component({
   selector: 'app-mostra-lista-filmes',
-  imports: [ListFilmesComponent],
+  imports: [BaseModule,Carousel],
   templateUrl: './mostra-lista-filmes.component.html',
   styleUrl: './mostra-lista-filmes.component.css',
 })

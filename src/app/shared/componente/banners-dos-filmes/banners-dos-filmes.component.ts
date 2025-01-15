@@ -3,9 +3,9 @@ import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-banners-dos-filmes',
-  imports: [CardModule],
   templateUrl: './banners-dos-filmes.component.html',
   styleUrl: './banners-dos-filmes.component.css',
+  standalone:false
 })
 export class BannersDosFilmesComponent {
   @Input() bannerUrl!: string;

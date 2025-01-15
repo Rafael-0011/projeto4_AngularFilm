@@ -8,6 +8,7 @@ import { PanelModule } from 'primeng/panel';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { StyleClassModule } from 'primeng/styleclass';
 import { ToolbarModule } from 'primeng/toolbar';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [],
@@ -21,6 +22,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     CardModule,
     PanelModule,
     ToolbarModule,
+    CarouselModule,
   ],
 
   exports:[
@@ -33,6 +35,7 @@ import { ToolbarModule } from 'primeng/toolbar';
     CardModule,
     PanelModule,
     ToolbarModule,
+    CarouselModule,
   ]
 })
 export class PrimeNgModule {}

@@ -1,15 +1,20 @@
-
-<p-card [style]="{ overflow: 'hidden', 'border-radius':'0px' }">
-  <ng-template #title>{{ titulo }}</ng-template>
-  <ng-template #subtitle>
-    <div [ngStyle]="customListStyles" class="card__flex">
-      @for (filme of listFilms; track $index) {
-      <a [routerLink]="['/filme', filme.id]" (click)="onFilmClick()">
-        <app-banners-dos-filmes
-          [bannerUrl]="logoUrl + filme.poster_path"
-        ></app-banners-dos-filmes>
-      </a>
-      }
-    </div>
-  </ng-template >
-</p-card>
+<h1>{{ titulo }}</h1>
+<p-carousel [value]="listFilms" [numVisible]="5" [numScroll]="3" [circular]="false" >
+    <ng-template let-product #item>
+        <div class="border border-surface rounded-border m-2 p-4">
+          <p-card [style]="{ overflow: 'hidden', 'border-radius':'0px' }">
+            <ng-template #subtitle>
+              <div [ngStyle]="customListStyles" class="card__flex">
+                @for (filme of listFilms; track $index) {
+                <a [routerLink]="['/filme', filme.id]" (click)="onFilmClick()">
+                  <app-banners-dos-filmes
+                    [bannerUrl]="logoUrl + filme.poster_path"
+                  ></app-banners-dos-filmes>
+                </a>
+                }
+              </div>
+            </ng-template >
+          </p-card>
+        </div>
+    </ng-template>
+</p-carousel>
