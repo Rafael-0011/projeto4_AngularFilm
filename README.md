@@ -40,7 +40,7 @@ Isso compilará para uma image docker
 docker build -t angular-filme-app .
 ```
 
-Isso faz o run da aplicao na porta :8080
+Isso faz o run da aplicacao na porta :8080
 
 ```bash
 docker run -p 8080:80 angular-filme-app:latest
